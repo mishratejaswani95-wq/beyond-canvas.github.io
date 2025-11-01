@@ -1,155 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery | Beyond Canvas Art Classes</title>
-  <link rel="stylesheet" href="style.css" />
-  <script>
-    function filterGallery(category) {
-      const items = document.querySelectorAll('.gallery-item');
-      items.forEach(item => {
-        if (category === 'all' || item.classList.contains(category)) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Beyond Canvas</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #fdfdfd;
+      font-family: "Poppins", sans-serif;
+      color: #444;
+      margin: 0;
+      padding: 0;
     }
-  </script>
+
+    header {
+      background: linear-gradient(135deg, #ffd6e8, #d6f0ff, #e0ffe0);
+      padding: 25px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      color: #444;
+      letter-spacing: 1px;
+    }
+
+    .banner {
+      background: url('https://cdn.pixabay.com/photo/2016/03/26/22/13/brush-1280529_1280.jpg') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 36px;
+      font-weight: 600;
+      text-shadow: 0 3px 10px rgba(0,0,0,0.4);
+    }
+
+    .gallery-container {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.07);
+    }
+
+    .gallery-item span {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 8px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="logo">🎨 Beyond Canvas</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="gallery.html" class="active">Gallery</a></li>
-        <li><a href="achievements.html">Achievements</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <header>Beyond Canvas Gallery</header>
 
-  <!-- BANNER -->
-  <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');">
-    <div class="hero-content">
-      <h1>Gallery</h1>
-      <p>Where every canvas tells a story and every color speaks emotion.</p>
-    </div>
-  </section>
+  <div class="banner">Student Artworks & Memories</div>
 
-  <!-- FILTER BUTTONS -->
-  <section class="filter-section">
-    <h2>Explore Our Students' Artworks</h2>
-    <div class="filters">
-      <button onclick="filterGallery('all')" class="btn">All</button>
-      <button onclick="filterGallery('sketch')" class="btn">Sketches</button>
-      <button onclick="filterGallery('watercolor')" class="btn">Watercolors</button>
-      <button onclick="filterGallery('mixed')" class="btn">Mixed Media</button>
-    </div>
-  </section>
-
-  <!-- GALLERY GRID -->
-  <section class="gallery-grid">
-    <div class="gallery-item sketch">
-      <img src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0" alt="Sketch 1">
-    </div>
-    <div class="gallery-item watercolor">
-      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Watercolor 1">
-    </div>
-    <div class="gallery-item mixed">
-      <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914" alt="Mixed Media 1">
-    </div>
-    <div class="gallery-item sketch">
-      <img src="https://images.unsplash.com/photo-1555685812-4b943f1cb0eb" alt="Sketch 2">
-    </div>
-    <div class="gallery-item watercolor">
-      <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f" alt="Watercolor 2">
-    </div>
-    <div class="gallery-item mixed">
-      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Mixed Media 2">
-    </div>
-    <div class="gallery-item sketch">
-      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Sketch 3">
-    </div>
-    <div class="gallery-item watercolor">
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Watercolor 3">
-    </div>
-    <div class="gallery-item mixed">
-      <img src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0" alt="Mixed Media 3">
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta">
-    <h2>Want Your Art Featured Here?</h2>
-    <p>Join our next batch and let your creativity shine on the Beyond Canvas wall!</p>
-    <a href="contact.html" class="btn">Enroll Now</a>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Beyond Canvas Art Classes | Crafted with 🎨 and ❤️</p>
-  </footer>
-
-<!-- CHATBOT -->
-<div id="chatbot">
-  <button id="chatbot-btn">💬</button>
-  <div id="chatbox" class="hidden">
-    <div class="chat-header">Beyond Canvas Assistant 🎨</div>
-    <div class="chat-messages" id="chat-messages"></div>
-    <div class="chat-input">
-      <input type="text" id="user-input" placeholder="Ask something..." />
-      <button id="send-btn">Send</button>
+  <div class="gallery-container">
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="https://cdn.pixabay.com/photo/2016/11/29/04/17/painting-1868107_1280.jpg"><span>Beginner Sketches</span></div>
+      <div class="gallery-item"><img src="https://cdn.pixabay.com/photo/2017/03/02/02/22/watercolor-2113159_1280.jpg"><span>Watercolor Practice</span></div>
+      <div class="gallery-item"><img src="https://cdn.pixabay.com/photo/2015/05/31/13/45/paint-791622_1280.jpg"><span>Creative Mix Media</span></div>
+      <div class="gallery-item"><img src="https://cdn.pixabay.com/photo/2016/03/26/22/13/brush-1280529_1280.jpg"><span>Brush Techniques</span></div>
+      <div class="gallery-item"><img src="https://cdn.pixabay.com/photo/2017/07/31/20/58/art-2559043_1280.jpg"><span>Student Showcase</span></div>
+      <div class="gallery-item"><img src="https://cdn.pixabay.com/photo/2015/03/26/09/41/watercolor-690034_1280.jpg"><span>Watercolor Portraits</span></div>
+      <div class="gallery-item"><img src="https://cdn.pixabay.com/photo/2018/01/11/08/34/art-3078360_1280.jpg"><span>Mixed Media Art</span></div>
+      <div class="gallery-item"><img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/art-849325_1280.jpg"><span>Student Workshop</span></div>
+      <div class="gallery-item"><img src="https://cdn.pixabay.com/photo/2015/01/15/14/46/paint-600579_1280.jpg"><span>Brush Control</span></div>
+      <div class="gallery-item"><img src="https://cdn.pixabay.com/photo/2015/07/28/22/02/painting-865022_1280.jpg"><span>Studio Moments</span></div>
+      <div class="gallery-item"><img src="https://cdn.pixabay.com/photo/2017/07/31/20/58/art-2559043_1280.jpg"><span>Art Jam Session</span></div>
+      <div class="gallery-item"><img src="https://cdn.pixabay.com/photo/2018/03/12/16/32/painting-3214063_1280.jpg"><span>Creative Fridays</span></div>
     </div>
   </div>
-</div>
 
-<script>
-  const chatbotBtn = document.getElementById("chatbot-btn");
-  const chatbox = document.getElementById("chatbox");
-  const sendBtn = document.getElementById("send-btn");
-  const userInput = document.getElementById("user-input");
-  const chatMessages = document.getElementById("chat-messages");
-
-  chatbotBtn.addEventListener("click", () => {
-    chatbox.classList.toggle("hidden");
-  });
-
-  const replies = {
-    "hi": "Hello there! 👋 How can I help you today?",
-    "hello": "Hi! Welcome to Beyond Canvas 💖",
-    "timing": "We offer morning & evening batches — contact us for the latest schedule 🕒",
-    "fees": "Our fee structure varies by course. You can contact us for detailed pricing 🎨",
-    "join": "You can enroll using our contact form or message us on WhatsApp 📱",
-    "online": "Yes! We do offer online art classes for all age groups 🌍",
-    "materials": "You’ll need basic art materials — we’ll guide you after registration 🖌️",
-    "default": "I’m not sure about that — please contact us directly for details 💬"
-  };
-
-  sendBtn.addEventListener("click", () => {
-    const question = userInput.value.toLowerCase().trim();
-    if (!question) return;
-    chatMessages.innerHTML += `<div class='user-msg'>${userInput.value}</div>`;
-    userInput.value = "";
-
-    let reply = replies["default"];
-    for (let key in replies) {
-      if (question.includes(key)) {
-        reply = replies[key];
-        break;
-      }
-    }
-
-    setTimeout(() => {
-      chatMessages.innerHTML += `<div class='bot-msg'>${reply}</div>`;
-      chatMessages.scrollTop = chatMessages.scrollHeight;
-    }, 500);
-  });
-</script> 
 </body>
 </html> 
