@@ -114,3 +114,70 @@ footer {
   font-size: 0.9em;
   color: #888;
 } 
+/* 🌷 Pricing Section */
+.pricing {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fefdfc;
+}
+
+.pricing h2 {
+  color: #f2a7b9;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.price-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 280px;
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  color: #86c5d8;
+  margin-bottom: 10px;
+}
+
+.card h4 {
+  color: #f2a7b9;
+  font-size: 1.3em;
+  margin: 10px 0;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  color: #555;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+.card button {
+  background: linear-gradient(135deg, #f2a7b9, #a7e4d8);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background: linear-gradient(135deg, #a7e4d8, #f2a7b9);
+} 
