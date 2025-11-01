@@ -3,109 +3,143 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Beyond Canvas</title>
+  <title>Contact Us | Beyond Canvas</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #fafafa;
+      font-family: "Poppins", sans-serif;
+      color: #444;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ffd6e8, #d6f0ff, #e0ffe0);
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: #444;
+      letter-spacing: 1px;
+    }
+
+    .contact-container {
+      max-width: 900px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    p {
+      text-align: center;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px 15px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #8ecae6;
+      outline: none;
+      box-shadow: 0 0 5px #8ecae6;
+    }
+
+    button {
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      color: #444;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+      transform: scale(1.03);
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 40px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .info-box {
+      background: #f9f9f9;
+      border-radius: 15px;
+      padding: 20px;
+      width: 260px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .info-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border-radius: 20px;
+      margin-top: 30px;
+      border: none;
+    }
+
+  </style>
 </head>
 <body>
+  <header>Contact Beyond Canvas</header>
 
-  <!-- Header -->
-  <header>
-    <div class="logo">Beyond Canvas</div>
-    <nav id="navMenu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="achievements.html">Achievements</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
-    <div class="menu-toggle" id="menuToggle">&#9776;</div>
-  </header>
+  <div class="contact-container">
+    <h2>We’d Love to Hear From You</h2>
+    <p>Have questions about our art classes, schedules, or workshops? Send us a message below or connect with us directly!</p>
 
-  <!-- Contact Section -->
-  <section class="contact-page">
-    <div class="contact-container">
-      <h1>Get in Touch</h1>
-      <p>We’d love to hear from you! Whether you want to join our art classes, ask questions, or just say hello — reach out anytime.</p>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
 
-      <form class="contact-form">
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <textarea rows="5" placeholder="Your Message..." required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-
-      <div class="contact-info">
-        <p><strong>WhatsApp:</strong> Coming Soon</p>
-        <p><strong>Phone:</strong> +91 70617 90205</p>
-        <p><strong>Instagram:</strong> Coming Soon</p>
+    <div class="contact-info">
+      <div class="info-box">
+        📞 <br><b>Phone:</b><br> +91 70617 90205
+      </div>
+      <div class="info-box">
+        💬 <br><b>WhatsApp:</b><br> (Add your number later)
+      </div>
+      <div class="info-box">
+        📸 <br><b>Instagram:</b><br> (Add link later)
       </div>
     </div>
 
-    <div class="contact-image">
-      <img src="https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?auto=format&fit=crop&w=900&q=80" alt="Art Studio">
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 Beyond Canvas. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
-<!-- CHATBOT -->
-<div id="chatbot">
-  <button id="chatbot-btn">💬</button>
-  <div id="chatbox" class="hidden">
-    <div class="chat-header">Beyond Canvas Assistant 🎨</div>
-    <div class="chat-messages" id="chat-messages"></div>
-    <div class="chat-input">
-      <input type="text" id="user-input" placeholder="Ask something..." />
-      <button id="send-btn">Send</button>
-    </div>
+    <!-- Optional: Google Map Embed -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." allowfullscreen="" loading="lazy"></iframe>
   </div>
-</div>
-
-<script>
-  const chatbotBtn = document.getElementById("chatbot-btn");
-  const chatbox = document.getElementById("chatbox");
-  const sendBtn = document.getElementById("send-btn");
-  const userInput = document.getElementById("user-input");
-  const chatMessages = document.getElementById("chat-messages");
-
-  chatbotBtn.addEventListener("click", () => {
-    chatbox.classList.toggle("hidden");
-  });
-
-  const replies = {
-    "hi": "Hello there! 👋 How can I help you today?",
-    "hello": "Hi! Welcome to Beyond Canvas 💖",
-    "timing": "We offer morning & evening batches — contact us for the latest schedule 🕒",
-    "fees": "Our fee structure varies by course. You can contact us for detailed pricing 🎨",
-    "join": "You can enroll using our contact form or message us on WhatsApp 📱",
-    "online": "Yes! We do offer online art classes for all age groups 🌍",
-    "materials": "You’ll need basic art materials — we’ll guide you after registration 🖌️",
-    "default": "I’m not sure about that — please contact us directly for details 💬"
-  };
-
-  sendBtn.addEventListener("click", () => {
-    const question = userInput.value.toLowerCase().trim();
-    if (!question) return;
-    chatMessages.innerHTML += `<div class='user-msg'>${userInput.value}</div>`;
-    userInput.value = "";
-
-    let reply = replies["default"];
-    for (let key in replies) {
-      if (question.includes(key)) {
-        reply = replies[key];
-        break;
-      }
-    }
-
-    setTimeout(() => {
-      chatMessages.innerHTML += `<div class='bot-msg'>${reply}</div>`;
-      chatMessages.scrollTop = chatMessages.scrollHeight;
-    }, 500);
-  });
-</script> 
 </body>
 </html> 
