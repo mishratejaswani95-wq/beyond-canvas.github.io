@@ -392,3 +392,55 @@ footer {
 .contact-links a:hover {
   color: #f2a7b9;
 } 
+/* 📍 Location Section */
+.location {
+  text-align: center;
+  padding: 70px 20px;
+  background: #fefdfc;
+}
+
+.location h2 {
+  font-family: 'Playfair Display', serif;
+  color: #f2a7b9;
+  font-size: 2.3em;
+  margin-bottom: 20px;
+}
+
+.map-container {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* 🌸 Footer */
+.footer {
+  background: linear-gradient(135deg, #f2a7b9, #a7e4d8);
+  text-align: center;
+  padding: 25px 15px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.footer .social-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer .social-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+  color: #fefdfc;
+  text-decoration: underline;
+} 
