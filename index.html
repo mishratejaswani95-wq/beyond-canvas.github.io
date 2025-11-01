@@ -1,186 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet"> 
-  <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Beyond Canvas Art Classes</title>
-
-  <!-- Link CSS -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beyond Canvas</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="banner">
-  <div class="overlay">
-    <h1>🎨 Beyond Canvas Art Classes 🎨</h1>
-    <p class="slogan">Where Art Becomes Emotion</p>
-  </div>
-  </header> 
 
-  <main class="container">
-    <h2>Contact Us 💌</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" rows="4" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </main>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">Beyond Canvas</div>
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="menu-toggle" id="menuToggle">&#9776;</div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Beyond Canvas</h1>
+      <p class="tagline">Where Art Becomes Emotion</p>
+      <p class="description">
+        At Beyond Canvas, we believe every brushstroke tells a story. 
+        We nurture creativity and confidence in every student — 
+        teaching art not just as a skill, but as a way of life. 
+        Our mission is to make learning art joyful, meaningful, 
+        and a source of inspiration for a brighter, more creative world.
+      </p>
+    </div>
+  </section>
 
   <footer>
-    <p>© 2025 Beyond Canvas • Made with 💕 pastel dreams</p>
+    <p>© 2025 Beyond Canvas. All rights reserved.</p>
   </footer>
 
-  <!-- Link JavaScript -->
   <script src="script.js"></script>
-<!-- 🌸 Pricing Section -->
-<section class="pricing">
-  <h2>🎨 Class Packages & Pricing</h2>
-  <div class="price-cards">
-    <div class="card">
-      <h3>Beginner Bliss</h3>
-      <p>Perfect for newcomers learning the basics.</p>
-      <h4>₹1500 / month</h4>
-      <ul>
-        <li>2 classes per week</li>
-        <li>Basic drawing & sketching</li>
-        <li>All materials provided</li>
-      </ul>
-      <button>Enroll Now</button>
-    </div>
-    <div class="card">
-      <h3>Creative Growth</h3>
-      <p>For learners exploring multiple art styles.</p>
-      <h4>₹2500 / month</h4>
-      <ul>
-        <li>3 classes per week</li>
-        <li>Watercolor, Acrylic, & Pastel</li>
-        <li>Group feedback sessions</li>
-      </ul>
-      <button>Join Today</button>
-    </div>
-    <div class="card">
-      <h3>Master Artist</h3>
-      <p>Advanced guidance & personalized projects.</p>
-      <h4>₹4000 / month</h4>
-      <ul>
-        <li>4+ classes per week</li>
-        <li>Custom art projects</li>
-        <li>Portfolio support</li>
-      </ul>
-      <button>Get Started</button>
-    </div>
-  </div>
-</section> 
-<!-- 👩‍🎨 Teacher Profile Section -->
-<section class="teacher">
-  <div class="teacher-container">
-    <img src="https://i.ibb.co/6F8Sf5N/artist-profile.jpg" alt="Art Teacher Portrait">
-    <div class="teacher-text">
-      <h2>Meet the Artist Behind Beyond Canvas</h2>
-      <p>
-        Hi! I'm <strong>[Your Name]</strong>, the heart and brush behind Beyond Canvas Art Classes.  
-        My goal is to help every student express their emotions through colors and creativity.  
-        With years of artistic experience, I believe art isn’t about perfection — it’s about *feeling*.
-      </p>
-      <p>
-        In my classes, we explore sketching, watercolor, acrylics, and mixed media — 
-        all in a calm, joyful environment where every mistake becomes a masterpiece. 💖
-      </p>
-      <button>Learn More</button>
-    </div>
-  </div>
-</section> 
-<!-- 🖼️ Gallery / Portfolio Section -->
-<section class="gallery" id="gallery">
-  <h2>Student Gallery & Creations</h2>
-  <div class="filter-buttons">
-    <button class="active" onclick="filterSelection('all')">All</button>
-    <button onclick="filterSelection('sketch')">Sketches</button>
-    <button onclick="filterSelection('watercolor')">Watercolor</button>
-    <button onclick="filterSelection('mixed')">Mixed Media</button>
-  </div>
-
-  <div class="gallery-grid">
-    <div class="art-item sketch"><img src="https://i.ibb.co/bsTVgVx/sketch1.jpg" alt="Sketch 1"></div>
-    <div class="art-item watercolor"><img src="https://i.ibb.co/2N6fX5S/watercolor1.jpg" alt="Watercolor 1"></div>
-    <div class="art-item mixed"><img src="https://i.ibb.co/6sGxtXt/mixed1.jpg" alt="Mixed Media 1"></div>
-    <div class="art-item sketch"><img src="https://i.ibb.co/FqtpR4K/sketch2.jpg" alt="Sketch 2"></div>
-    <div class="art-item watercolor"><img src="https://i.ibb.co/Qj3f7hf/watercolor2.jpg" alt="Watercolor 2"></div>
-    <div class="art-item mixed"><img src="https://i.ibb.co/0YYvVdp/mixed2.jpg" alt="Mixed Media 2"></div>
-  </div>
-</section> 
-<!-- 💌 Contact / Inquiry Section -->
-<section class="contact" id="contact">
-  <h2>Get in Touch 💬</h2>
-  <p>Have a question or want to join a class? I’d love to hear from you!</p>
-
-  <form class="contact-form" action="https://formspree.io/f/xaylzyzj" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-
-  <div class="contact-links">
-    <a href="https://wa.me/91XXXXXXXXXX" target="_blank">💚 Chat on WhatsApp</a>
-    <a href="mailto:yourmail@example.com">📧 Email Me</a>
-  </div>
-</section> 
-<!-- 📍 Location & Social Footer -->
-<section class="location" id="location">
-  <h2>Find Us 🎨</h2>
-  <div class="map-container">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0671690268586!2d144.96316!3d-37.814107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf0727b7c91a2d3b7!2sArt%20Studio!5e0!3m2!1sen!2sin!4v1698777777777!5m2!1sen!2sin"
-      width="100%"
-      height="350"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy">
-    </iframe>
-  </div>
-</section>
-
-<footer class="footer">
-  <p>© 2025 Beyond Canvas Art Classes. All rights reserved.</p>
-  <div class="social-links">
-    <a href="https://www.instagram.com/" target="_blank">🌸 Instagram</a>
-    <a href="https://www.youtube.com/" target="_blank">🎥 YouTube</a>
-    <a href="https://in.pinterest.com/" target="_blank">🖼️ Pinterest</a>
-  </div>
-</footer> 
-<!-- 🏆 Achievements Section -->
-<section class="achievements fade-in" id="achievements">
-  <h2>Our Achievements 🏆</h2>
-  <p class="subtitle">Celebrating creativity, growth, and beautiful moments at Beyond Canvas 🌷</p>
-
-  <div class="achievement-grid">
-    <div class="achievement-card">
-      <img src="https://via.placeholder.com/300x200" alt="Art Exhibition">
-      <h3>Annual Art Exhibition 2024</h3>
-      <p>Our talented students showcased 50+ original artworks, from watercolor florals to acrylic landscapes.</p>
-    </div>
-
-    <div class="achievement-card">
-      <img src="https://via.placeholder.com/300x200" alt="Award">
-      <h3>National Youth Art Award</h3>
-      <p>Congratulations to Aanya for winning the 1st prize for her “Dreams in Motion” painting 🖌️</p>
-    </div>
-
-    <div class="achievement-card">
-      <img src="https://via.placeholder.com/300x200" alt="Community Project">
-      <h3>Community Mural Project</h3>
-      <p>Students created a vibrant mural celebrating nature and peace in our local park 🌿</p>
-    </div>
-  </div>
-</section> 
-<section class="hero fade-in">...</section>
-<section class="pricing fade-in">...</section>
-<section class="contact fade-in">...</section>
-<section class="location fade-in">...</section> 
 </body>
 </html> 
