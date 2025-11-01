@@ -455,3 +455,63 @@ footer {
   opacity: 1;
   transform: translateY(0);
 } 
+/* 🏆 Achievements Section */
+.achievements {
+  padding: 80px 20px;
+  background: #fdfcfa;
+  text-align: center;
+}
+
+.achievements h2 {
+  font-family: 'Playfair Display', serif;
+  color: #f2a7b9;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.achievements .subtitle {
+  font-family: 'Poppins', sans-serif;
+  color: #888;
+  margin-bottom: 40px;
+  font-size: 1.1em;
+}
+
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.achievement-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.achievement-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.achievement-card h3 {
+  color: #555;
+  margin: 15px 0 5px;
+  font-size: 1.3em;
+}
+
+.achievement-card p {
+  padding: 0 15px 20px;
+  color: #777;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95em;
+} 
