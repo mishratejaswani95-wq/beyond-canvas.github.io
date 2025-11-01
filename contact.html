@@ -52,5 +52,60 @@
   </footer>
 
   <script src="script.js"></script>
+<!-- CHATBOT -->
+<div id="chatbot">
+  <button id="chatbot-btn">💬</button>
+  <div id="chatbox" class="hidden">
+    <div class="chat-header">Beyond Canvas Assistant 🎨</div>
+    <div class="chat-messages" id="chat-messages"></div>
+    <div class="chat-input">
+      <input type="text" id="user-input" placeholder="Ask something..." />
+      <button id="send-btn">Send</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const chatbotBtn = document.getElementById("chatbot-btn");
+  const chatbox = document.getElementById("chatbox");
+  const sendBtn = document.getElementById("send-btn");
+  const userInput = document.getElementById("user-input");
+  const chatMessages = document.getElementById("chat-messages");
+
+  chatbotBtn.addEventListener("click", () => {
+    chatbox.classList.toggle("hidden");
+  });
+
+  const replies = {
+    "hi": "Hello there! 👋 How can I help you today?",
+    "hello": "Hi! Welcome to Beyond Canvas 💖",
+    "timing": "We offer morning & evening batches — contact us for the latest schedule 🕒",
+    "fees": "Our fee structure varies by course. You can contact us for detailed pricing 🎨",
+    "join": "You can enroll using our contact form or message us on WhatsApp 📱",
+    "online": "Yes! We do offer online art classes for all age groups 🌍",
+    "materials": "You’ll need basic art materials — we’ll guide you after registration 🖌️",
+    "default": "I’m not sure about that — please contact us directly for details 💬"
+  };
+
+  sendBtn.addEventListener("click", () => {
+    const question = userInput.value.toLowerCase().trim();
+    if (!question) return;
+    chatMessages.innerHTML += `<div class='user-msg'>${userInput.value}</div>`;
+    userInput.value = "";
+
+    let reply = replies["default"];
+    for (let key in replies) {
+      if (question.includes(key)) {
+        reply = replies[key];
+        break;
+      }
+    }
+
+    setTimeout(() => {
+      chatMessages.innerHTML += `<div class='bot-msg'>${reply}</div>`;
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }, 500);
+  });
+</script> 
 </body>
 </html> 
