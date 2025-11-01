@@ -15,3 +15,17 @@ function filterSelection(category) {
   buttons.forEach(btn => btn.classList.remove("active"));
   event.target.classList.add("active");
 } 
+// 🌸 Scroll Animation
+const fadeEls = document.querySelectorAll('.fade-in');
+
+function showOnScroll() {
+  fadeEls.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', showOnScroll);
+window.addEventListener('load', showOnScroll);
